@@ -125,10 +125,6 @@ This should be interpreted as a model validation finding, not hidden as a failur
 
 ## 8. Plots and Tables
 
-Generated when the analysis pipeline is run.
-The analysis pipeline writes raw outputs to `outputs/`; selected
-presentation-ready plots are copied into `assets/`.
-
 ### Survival analysis plots
 
 ![Kaplan-Meier overall survival curve](assets/plots/kaplan_meier_overall.png)
