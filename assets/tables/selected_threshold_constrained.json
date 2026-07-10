@@ -1,0 +1,10 @@
+{
+  "selected_threshold": 0.51,
+  "coupon_cost": 15.0,
+  "churn_cost": 100.0,
+  "max_target_rate": 0.2,
+  "minimum_precision": 0.1,
+  "budget_cap": 10000.0,
+  "selection_rule": "maximum expected profit subject to operational constraints",
+  "warning": null
+}
