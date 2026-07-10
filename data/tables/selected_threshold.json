@@ -1,0 +1,6 @@
+{
+  "selected_threshold": 0.01,
+  "coupon_cost": 15.0,
+  "churn_cost": 100.0,
+  "selection_rule": "threshold with maximum total expected profit on evaluation set"
+}

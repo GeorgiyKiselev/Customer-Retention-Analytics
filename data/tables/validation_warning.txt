@@ -1,0 +1,1 @@
+Temporal split requested but the processed table contains only one observation cutoff date. Falling back to stratified random split.
