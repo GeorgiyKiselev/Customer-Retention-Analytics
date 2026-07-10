@@ -1,4 +1,0 @@
-risk_segment,number_of_customers,average_churn_probability,average_ltv,total_recommended_coupon_budget
-High risk,169,0.511051859860261,424547.77712366864,2535.0
-Low risk,1322,0.5048802424327342,329.94950090771556,0.0
-Medium risk,77447,0.5052821906596764,102693.63222285692,7465.0
