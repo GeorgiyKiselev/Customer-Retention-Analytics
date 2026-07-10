@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-This project builds an end-to-end customer retention analytics workflow from a transactional e-commerce data warehouse. The source data is not a pre-labeled churn dataset; it is a star-schema / warehouse-style dataset where customer disengagement must be constructed from purchase behavior.
+This project builds an end-to-end customer retention analytics workflow from a transactional e-commerce data warehouse. The source data is a star-schema / warehouse-style dataset where customer disengagement must be constructed from purchase behavior.
 
 Project objective:
 
