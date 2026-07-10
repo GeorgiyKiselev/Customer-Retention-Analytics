@@ -182,20 +182,20 @@ presentation-ready plots are copied into `assets/`.
 
 ### Tables
 
-- [Model metrics](outputs/tables/model_metrics.csv)
-- [Baseline model metrics](outputs/tables/baseline_model_metrics.csv)
-- [Threshold analysis](outputs/tables/threshold_analysis.csv)
-- [Constrained threshold analysis](outputs/tables/threshold_analysis_constrained.csv)
-- [Selected constrained threshold](outputs/tables/selected_threshold_constrained.json)
-- [Scored customers](outputs/tables/scored_customers.csv)
-- [Constrained scored customers](outputs/tables/scored_customers_constrained.csv)
-- [Retention budget summary](outputs/tables/retention_budget_summary.csv)
-- [Constrained retention budget summary](outputs/tables/retention_budget_summary_constrained.csv)
-- [Churn label diagnostics](outputs/tables/churn_label_diagnostics.csv)
-- [Feature importance table](outputs/tables/xgboost_feature_importance.csv)
-- [Logistic regression coefficients](outputs/tables/logistic_coefficients.csv)
-- [Cox model summary](outputs/tables/cox_summary.csv)
-- [Proportional hazards diagnostics](outputs/tables/proportional_hazards_diagnostics.txt)
+- [Model metrics](assets/tables/model_metrics.csv)
+- [Baseline model metrics](assets/tables/baseline_model_metrics.csv)
+- [Threshold analysis](assets/tables/threshold_analysis.csv)
+- [Constrained threshold analysis](assets/tables/threshold_analysis_constrained.csv)
+- [Selected constrained threshold](assets/tables/selected_threshold_constrained.json)
+- [Scored customers](assets/tables/scored_customers.csv)
+- [Constrained scored customers](assets/tables/scored_customers_constrained.csv)
+- [Retention budget summary](assets/tables/retention_budget_summary.csv)
+- [Constrained retention budget summary](assets/tables/retention_budget_summary_constrained.csv)
+- [Churn label diagnostics](assets/tables/churn_label_diagnostics.csv)
+- [Feature importance table](assets/tables/xgboost_feature_importance.csv)
+- [Logistic regression coefficients](assets/tables/logistic_coefficients.csv)
+- [Cox model summary](assets/tables/cox_summary.csv)
+- [Proportional hazards diagnostics](assets/tables/proportional_hazards_diagnostics.txt)
 
 ## 9. Retention Policy
 
