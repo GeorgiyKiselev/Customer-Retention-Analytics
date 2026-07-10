@@ -8,19 +8,19 @@ Project objective:
 
 > Given a fixed window of customer transaction history, estimate future disengagement risk and translate model outputs into retention-budget recommendations.
 
-The workflow is intentionally realistic: it includes raw data ingestion, schema discovery, feature extraction, churn-label construction, survival analysis, classification modeling, calibration, explainability, and business decision policy. The current models do not show strong predictive discrimination, and the project treats that honestly as a validation finding rather than overstating performance.
+The workflow includes raw data ingestion, schema discovery, feature extraction, churn-label construction, survival analysis, classification modeling, calibration, explainability, and business decision policy. The current models do not show strong predictive discrimination, and the project treats that honestly as a validation finding rather than overstating performance.
 
 ## 2. Dataset
 
 The project uses the Kaggle:
 
 ```text
-E-Commerce Data Warehouse Dataset
+E-Commerce Data Warehouse Dataset: https://www.kaggle.com/datasets/shandeep777/e-commerce-data-warehouse-dataset/data
 ```
 
-This dataset contains warehouse-style transactional tables rather than one ready-made modeling file. The likely entities include customers, orders or transactions, products, dates, monetary/order amounts, fulfillment fields, and related warehouse dimensions when available.
+This dataset contains warehouse-style transactional tables rather than one ready-made modeling file.
 
-Because the dataset is transactional, it requires preprocessing before modeling. Customer churn is not directly provided as a clean target variable; this project derives churn from observed customer purchase inactivity.
+Because the dataset is transactional, it requires preprocessing before modeling. Customer churn is not directly provided as a clean target variable, and this project derives churn from observed customer purchase inactivity.
 
 > Because the target is derived rather than provided, model quality depends heavily on whether the churn definition matches the actual purchase cadence in the dataset.
 
@@ -126,8 +126,6 @@ This should be interpreted as a model validation finding, not hidden as a failur
 ## 8. Plots and Tables
 
 Generated when the analysis pipeline is run.
-
-Images shown below are stored in `assets/` so they render reliably on GitHub.
 The analysis pipeline writes raw outputs to `outputs/`; selected
 presentation-ready plots are copied into `assets/`.
 
@@ -243,69 +241,3 @@ ROC-AUC values near 0.50 indicate weak ranking ability. In the current run, simp
 ### Business limitations
 
 A calibrated but weak model should not drive coupon spend without additional validation. Stronger labels, richer behavioral data, and future-period validation are needed before production use.
-
-## 11. Repository Structure
-
-```text
-src/
-  data_loading.py
-  feature_engineering.py
-  run_pipeline.py
-  train_models.py
-  modeling.py
-  diagnostics.py
-  analysis_plots.py
-  retention_policy.py
-
-notebooks/
-  churn_prediction_survival_retention.ipynb
-  churn_analysis.ipynb
-
-data/
-  processed/
-
-outputs/
-  plots/
-  tables/
-  shap/
-
-assets/
-  plots/
-  tables/
-  shap/
-
-reports/
-  retention_strategy.md
-
-models/
-
-tests/
-```
-
-## 12. How to Read This Project
-
-Start with this README for project context and the main findings. Review [notebooks/churn_prediction_survival_retention.ipynb](notebooks/churn_prediction_survival_retention.ipynb) for the analysis narrative and generated plots. Review [assets/plots/](assets/plots/) for GitHub-rendered presentation visuals, and [outputs/plots/](outputs/plots/) plus [outputs/tables/](outputs/tables/) for raw generated analysis artifacts. Review [reports/retention_strategy.md](reports/retention_strategy.md) for the business-facing retention policy.
-
-### Reproducibility note
-
-Use Python 3.10-3.12. On Windows:
-
-```bash
-py -3.12 -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python src/run_pipeline.py --data-dir "C:/path/to/raw/kaggle/data"
-python src/train_models.py --input data/processed/churn_modeling_table_enhanced.csv --split temporal
-python src/sync_assets.py
-```
-
-On macOS/Linux:
-
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python src/run_pipeline.py --data-dir "/path/to/raw/kaggle/data"
-python src/train_models.py --input data/processed/churn_modeling_table_enhanced.csv --split temporal
-python src/sync_assets.py
-```
